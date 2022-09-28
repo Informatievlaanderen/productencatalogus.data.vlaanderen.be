@@ -77,9 +77,9 @@ jobs:
       OTHER_FOLDER: <<parameters.other_folder>>
     steps:
       - checkout
-#      - add_ssh_keys:
-#          fingerprints:
-#            - "$$SSHKEYFINGERPRINT"
+      - add_ssh_keys:
+          fingerprints:
+            - "9b:9a:d4:cd:de:d8:9b:5c:7c:a4:72:f2:29:89:cc:81"
 #      - run:
 #          name: update and add extra statements of updating the ssh config for each private ssh key
 #          command: |
@@ -483,7 +483,7 @@ jobs:
           at: /tmp/workspace
       - add_ssh_keys:
           fingerprints:
-            - "$SSHKEYFINGERPRINT"
+            - "9b:9a:d4:cd:de:d8:9b:5c:7c:a4:72:f2:29:89:cc:81"
       - run:
           name: update and add extra statements of updating the ssh config for each private ssh key
           command: |
