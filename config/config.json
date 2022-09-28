@@ -1,14 +1,14 @@
 {
-  "primeLanguage": "en",
+  "primeLanguage": "nl",
   "otherLanguages": [
-    "fr", "de"
+    "fr", "de", "en"
   ],
-  "hostname": "https://dev.specs.org/",
-  "domain": "data.spec.org",
+  "hostname": "https://productencatalogus.data.dev-vlaanderen.be/",
+  "domain": "productencatalogus.data.vlaanderen.be",
   "publicationpoints" : ["dev"],
   "generatedrepository" : {
-	  "organisation": "GitHubOrganisation",
-	  "repository" : "GeneratedRepository",
+	  "organisation": "Informatievlaanderen",
+	  "repository" : "productencatalogus.data.vlaanderen.be-generated",
 	  "private" : false
   },
   "toolchainversion" : "3.0.3",
