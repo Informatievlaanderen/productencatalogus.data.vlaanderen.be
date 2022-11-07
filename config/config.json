@@ -3,9 +3,9 @@
   "otherLanguages": [
     "fr", "de", "en"
   ],
-  "hostname": "https://productencatalogus.data.dev-vlaanderen.be/",
+  "hostname": "https://productencatalogus.data.vlaanderen.be/",
   "domain": "productencatalogus.data.vlaanderen.be",
-  "publicationpoints" : ["dev"],
+  "publicationpoints" : ["prod"],
   "generatedrepository" : {
 	  "organisation": "Informatievlaanderen",
 	  "repository" : "productencatalogus.data.vlaanderen.be-generated",
