@@ -5,7 +5,7 @@
   ],
   "hostname": "https://productencatalogus.data.test-vlaanderen.be/",
   "domain": "productencatalogus.data.vlaanderen.be",
-  "publicationpoints" : ["dev"],
+  "publicationpoints" : ["test"],
   "generatedrepository" : {
 	  "organisation": "Informatievlaanderen",
 	  "repository" : "productencatalogus.data.vlaanderen.be-generated",

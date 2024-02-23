@@ -2,10 +2,25 @@
   {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15",
     "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
-    "branchtag": "main",
+    "branchtag": "9f0e2db",
     "name": "ipdc-lpdc-im",
     "filename": "config/ipdc-lpdc-im.json",
-    "navigation": {},
+    "navigation": {
+	    "next" : "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2023-10-09"
+      },
+    "disabled": false,
+    "dummy": "001"
+  },
+  {
+    "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2023-10-09",
+    "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
+    "branchtag": "96b0887",
+    "name": "ipdc-lpdc-im",
+    "filename": "config/ipdc-lpdc-im.json",
+    "navigation": {
+	    "next": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2023-02-21",
+	    "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2023-10-09"
+     },
     "disabled": false,
     "dummy": "001"
   },
@@ -15,7 +30,9 @@
     "branchtag": "main",
     "name": "ipdc-lpdc-im",
     "filename": "config/ipdc-lpdc-im.json",
-    "navigation": {},
+    "navigation": {
+	    "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2023-10-09"
+    },
     "disabled": false,
     "dummy": "001"
   },
