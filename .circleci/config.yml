@@ -435,13 +435,14 @@ jobs:
           name: Copy static assets
           command: |
             cp -R site-skeleton/* /tmp/generated/
-      - run:
-          name: deploy statistics 
-          command: |
-           export CIRCLEWKD=$( eval echo "${CIRCLE_WORKING_DIRECTORY}" )
-           pushd ${CIRCLEWKD}/statistics
-           ./deploy.sh /tmp/generated
-           popd
+#      - run: 
+#      enable this when also statistics are needed, in that case copy the statistics directory from the template
+#          name: deploy statistics  
+#          command: |
+#           export CIRCLEWKD=$( eval echo "${CIRCLE_WORKING_DIRECTORY}" )
+#           pushd ${CIRCLEWKD}/statistics
+#           ./deploy.sh /tmp/generated
+#           popd
       - run:
           name: Copy generated assets
           workdir: /tmp/workspace
