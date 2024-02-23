@@ -551,6 +551,6 @@ workflows:
             - render-context-details
             - render-voc-rdf
       - create-artifact:
-          generatedReporFingerprint: "9b:9a:d4:cd:de:d8:9b:5c:7c:a4:72:f2:29:89:cc:81"
+          generatedReporFingerprint: "SHA256:gwc4RYe2CmmHNcJ+fUnxvcUCaQ1KIYIvyVePKpsI6iw"
           requires:
             - expand-links
