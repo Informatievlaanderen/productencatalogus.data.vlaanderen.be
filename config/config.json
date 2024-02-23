@@ -9,12 +9,20 @@
   "generatedrepository" : {
 	  "organisation": "Informatievlaanderen",
 	  "repository" : "productencatalogus.data.vlaanderen.be-generated",
-	  "private" : false
+	  "private" : false,
+	  "gitEmail" : "oslo@vlaanderen.be",
+	  "gitUser" : "circleci"
   },
-  "toolchainversion" : "3.0.5",
+  "toolchainversion" : "3.1.2",
   "toolchain" : {
 	  "strickness" : "lazy",
 	  "version": 3,
 	  "triggerall" : true
+  },
+  "shaclgenerator" : {
+	  "parameters": "-m individual -c 'uniqueLanguages' -c 'nodeKind'"
+  },
+  "contextgenerator" : {
+	  "parameters" : "-c -l label"
   }
 }
