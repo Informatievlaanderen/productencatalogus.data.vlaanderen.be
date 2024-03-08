@@ -44,10 +44,23 @@
     "name": "ipdc-lpdc-im",
     "filename": "config/ipdc-lpdc-im.json",
     "navigation": {
-      "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-21"
+      "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-21",
+      "next": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-03-08"
     },
     "disabled": false,
-    "dummy": "006"
+    "dummy": "007"
+  },
+  {
+    "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-03-08",
+    "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
+    "branchtag": "ontwerp-2024-03-08",
+    "name": "ipdc-lpdc-im",
+    "filename": "config/ipdc-lpdc-im.json",
+    "navigation": {
+      "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29"
+    },
+    "disabled": false,
+    "dummy": "001"
   },
   {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/bert",
@@ -93,23 +106,36 @@
     "name": "ipdc-lpdc",
     "filename": "config/ipdc-lpdc-voc.json",
     "navigation": {
-      "prev": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-02-21"
+      "prev": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-02-21",
+      "next": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-03-08"
     },
     "disabled": false,
-    "dummy": "006"
+    "dummy": "007"
+  },
+  {
+    "urlref": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-03-08",
+    "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
+    "branchtag": "ontwerp-2024-03-08",
+    "name": "ipdc-lpdc",
+    "filename": "config/ipdc-lpdc-voc.json",
+    "navigation": {
+      "prev": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-02-29"
+    },
+    "disabled": false,
+    "dummy": "001"
   },
   {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc",
-    "seealso": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29",
+    "seealso": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-03-08",
     "type": "ap",
     "disabled": false,
-    "dummy": "003"
+    "dummy": "004"
   },
   {
     "urlref": "/ns/ipdc-lpdc",
-    "seealso": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-02-29",
+    "seealso": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-03-08",
     "type": "voc",
     "disabled": false,
-    "dummy": "003"
+    "dummy": "004"
   }
 ]
