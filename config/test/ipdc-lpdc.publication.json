@@ -207,13 +207,13 @@
     "seealso": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-07-04",
     "type": "ap",
     "disabled": false,
-    "dummy": "011"
+    "dummy": "012"
   },
   {
     "urlref": "/ns/ipdc-lpdc",
     "seealso": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-07-04",
     "type": "voc",
     "disabled": false,
-    "dummy": "011"
+    "dummy": "012"
   }
 ]
