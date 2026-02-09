@@ -40,7 +40,7 @@
       <div class="vl-page">
          <div class="vl-layout">
             <div class="vl-skiplink">
-               <a rel="nofollow noreferrer" href="#main">Skip this section and go to general content</a>
+               <a rel="nofollow noreferrer" href="#main">Direkt zum Inhalt</a>
             </div>
          </div>
          <div class="vl-page">
@@ -50,7 +50,7 @@
                      <div class="vl-col--9-12 vl-col--1-1--s">
                         {% if data.metadata.autotranslate %}
                            <div class="disclaimer">
-                              <p>This document is a translation from {{ data.metadata.primaryLanguage }} to English.</p>
+                              <p>Dieses Dokument ist eine Übersetzung von {{ data.metadata.primaryLanguage }} ins Deutsche.</p>
                            </div>
                         {% endif %}
                         <div class="head" role="contentinfo" id="respecHeader">
@@ -61,20 +61,20 @@
                                  <dd>
                                     <a href="{{ data.metadata.status }}">{{ data.metadata.statuslabel }}</a>
                                  </dd>
-                                 <dt>Published on</dt>
+                                 <dt>Veröffentlicht am</dt>
                                  <dd>{{ data.metadata.issued }}</dd>
-                                 <dt>This version</dt>
+                                 <dt>Diese Version</dt>
                                  <dd>
                                     <a href="{{ data.metadata.navigation.self }}">{{ data.metadata.navigation.self }}</a>
                                  </dd>
                                  {% if data.metadata.navigation.next %}
-                                    <dt>Next version</dt>
+                                    <dt>Nächste Version</dt>
                                     <dd>
                                        <a href="{{ data.metadata.navigation.next }}">{{ data.metadata.navigation.next }}</a>
                                     </dd>
                                  {% endif %}
                                  {% if data.metadata.navigation.prev %}
-                                    <dt>Previous version</dt>
+                                    <dt>Vorherige Version</dt>
                                     <dd>
                                        <a href="{{ data.metadata.navigation.prev }}">{{ data.metadata.navigation.prev }}</a>
                                     </dd>
@@ -82,7 +82,7 @@
                               </dl>
                            </div>
                            <dl>
-                              <dt>Authors</dt>
+                              <dt>Autoren</dt>
                               {% set sortedAuthors = (data.stakeholders.authors | sort(attribute='lastName')) %}
                               {% for author in sortedAuthors %}
                                  <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
@@ -103,7 +103,7 @@
                                     </span>
                                  </dd>
                               {% endfor %}
-                              <dt>Editors</dt>
+                              <dt>Redakteure</dt>
                               {% set sortedEditors = (data.stakeholders.editors | sort(attribute='lastName')) %}
                               {% for editor in sortedEditors %}
                                  <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
@@ -124,7 +124,7 @@
                                     </span>
                                  </dd>
                               {% endfor %}
-                              <dt>Contributors</dt>
+                              <dt>Mitwirkende</dt>
                               {% set sortedContributors = (data.stakeholders.contributors | sort(attribute='lastName')) %}
                               {% for contributor in sortedContributors %}
                                  <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
@@ -148,7 +148,7 @@
                            </dl>
                            <div class="head" role="metainfo" id="metainfo">
                               <dl>
-                                 <dt>Source data</dt>
+                                 <dt>Quelldaten</dt>
                                  <dd>
                                     <a href="{{ data.metadata.repositoryurl }}">{{ data.metadata.repositoryurl }}</a>
                                  </dd>
@@ -156,16 +156,16 @@
                                  <dd>
                                     <a href="{{ data.metadata.changelogurl }}">{{ data.metadata.changelogurl }}</a>
                                  </dd>
-                                 <dt>Feedback</dt>
+                                 <dt>Kommentare und Feedback</dt>
                                  <dd>
                                     <a href="{{ data.metadata.feedbackurl }}">{{ data.metadata.feedbackurl }}</a>
                                  </dd>
-                                 <dt>Registry of standards</dt>
+                                 <dt>Normenregister</dt>
                                  <dd>
                                     <a href="{{ data.metadata.standaardregisterurl }}">{{ data.metadata.standaardregisterurl }}</a>
                                  </dd>
                                  {% if data.metadata.dependencies %}
-                                    <dt>Dependencies</dt>
+                                    <dt>Abhängigkeiten</dt>
                                     <dd>
                                        {% for dep in metadata.dependencies %}
                                           <a href="{{ dep.packageurl }}">{{ dep.packagelabel }}</a>
@@ -188,20 +188,22 @@
                         <div class="vl-introduction vl-typography">
                            {% block introduction %}
                               <p>
-                                 This document describes an
-                                 <strong>application profile</strong>, in this case
+                                 In diesem Dokument wird ein
+                                 <strong>Anwendungsprofil</strong>
+                                 beschrieben, in diesem Fall
                                  <strong>
                                     {{ data.metadata.title }}</strong>. <!-- Een applicatieprofiel is een specificatie die bestaande termen hergebruikt van verschillende basis-standaarden en
                                        daar meer specificiteit aan toevoegt. -->
                                  <!-- Daarbij wordt het gebruik van de termen toegelicht voor de interbestuurlijke uitwisseling van overheidsinformatie.
                                  -->
-                              The application profile specifies a semantic data model covering a set of usecases. The specification consists of terms
-                              with their constraints (cardinalities, codelists, usage guidelines).
+                              Dieses Anwendungsprofil beantwortet die Frage, wie das entsprechende Domänenmodell in der Praxis angewendet werden kann.
+                              Darüber hinaus werden die Einschränkungen (Kardinalität, Codelisten) erläutert und die entsprechenden (RDF) Begriffe
+                              aufgelistet.
                            </p>
                         {% endblock %}
                      </div>
                      </div>
-                        <div class="vl-region vl-region.vl-region--no-space-top vl-typography" id="summary"> <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">Summary</h2>
+                        <div class="vl-region vl-region.vl-region--no-space-top vl-typography" id="summary"> <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">Zusammenfassung</h2>
                         {% block summary %}
                            {% if data.metadata.description %}
                               {{ data.metadata.description[language] }}
@@ -210,61 +212,62 @@
                      </div>
                      <div class="vl-region vl-region.vl-region--no-space-top vl-typography" id="status">
                         <section class="introductory" id="sotd" typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter">
-                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
+                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">Status dieses Dokuments</h2>
                            {% block status %}
                               <p>
-                                 This application profile has the status
+                                 Dieses Anwendungsprofil hat den Status
                                  <a href="{{ data.metadata.status }}">
                                     {{ data.metadata.statuslabel }}</a>
-                                 published at {{ data.metadata.issued }}.
+                                 und wurde veröffentlicht am {{ data.metadata.issued }}.
                               </p>
                               <p>
-                                 Information about the process and the decisions involved in the creation of this specification are consultable at the
-                                 <a href="{{ data.metadata.standaardregisterurl }}">registry of standards</a>.
+                                 Informationen über den angewandten Prozess und die Entscheidungen, um zu dieser Spezifikation zu gelangen, sind im
+                                 <a href="{{ data.metadata.standaardregisterurl }}">Normenregister</a>
+                                 verfügbar.
                               </p>
                            {% endblock %}
                         </section>
                      </div>
                      <div class="vl-region vl-region.vl-region--no-space-top vl-typography" id="license">
-                        <h2 class="vl-title--h2">License</h2>
+                        <h2 class="vl-title--h2">Lizenz</h2>
                         {% block license %}
                            <p>
                               <span rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text" xmlns:dct="http://purl.org/dc/terms/">
-                                 This specification</span>
-                              of
+                                 Diese Spezifikation</span>
+                              von
                               <a
                                  rel="cc:attributionURL"
                                  property="cc:attributionName"
                                  href="https://data.vlaanderen.be/id/organisatie/OVO002949"
                                  xmlns:cc="http://creativecommons.org/ns#">Digitaal Vlaanderen</a>
-                              is published under
+                              wird unter dem
                               <a
                                  href="https://overheid.vlaanderen.be/sites/default/files/documenten/ict-egov/licenties/hergebruik/modellicentie_gratis_hergebruik_v1_0.html"
-                                 rel="license">"Model License Free Reuse - v1.0"</a>.
+                                 rel="license">"Modelllizenz Kostenlose Wiederverwendung - v1.0"</a>
+                              veröffentlicht.
                            </p>
                         {% endblock %}
                      </div>
                      <div class="vl-region vl-region.vl-region--no-space-top vl-typography" id="conformance">
-                        <h2 class="vl-title--h2" id="conformance" aria-level="1" role="heading">Conformance</h2>
+                        <h2 class="vl-title--h2" id="conformance" aria-level="1" role="heading">Übereinstimmung</h2>
                         {% block conformance %}
-                           <p>An implementation is conformant with this application profile if it satifies
-                              <a href="/doc/begeleidend/applicatieprofielen/conformiteit">these rules</a>
-                              .
+                           <p>Die Compliance für Anwendungsprofile finden Sie
+                              <a href="/doc/begeleidend/applicatieprofielen/conformiteit">hier</a>.
                            </p>
                         {% endblock %}
                      </div>
                      <div class="vl-region vl-region.vl-region--no-space-top" id="overview">
-                        <h2 class="vl-title--h2">Overview</h2>
+                        <h2 class="vl-title--h2">Überblick</h2>
                         {% if data.metadata.autotranslate %}
                            <div class="disclaimer">
-                              <p>This document is a translation from {{ data.metadata.primaryLanguage }} to English.</p>
+                              <p>Dieses Dokument ist eine Übersetzung von {{ data.metadata.primaryLanguage }} ins Deutsche.</p>
                               <br></div>
                            {% endif %}
                            <div class="vl-grid">
                               <div class="vl-col--9-12 vl-col--1-1--s vl-typography">
                                  {% if ( ( data.classes | length > 0)   ) %}
                                     <div class="vl-region vl-region.vl-region--no-space-top">
-                                       <p>This document describes the usage of the following entities for a correct usage of the Application Profile: <br/> |
+                                       <p>In diesem Dokument wird die korrekte Verwendung der folgenden Entitäten erläutert: <br/> |
                                           {%- for entity in data.classes %}
                                              {% if entity.applicationProfileLabel[language] %}
                                                 <a href="#{{ entity.applicationProfileLabel[language] | generateAnchorTag() }}">
@@ -278,7 +281,7 @@
                                  {% if ( ( data.dataTypes | length ) > 0 ) %}
                                     <div class="vl-region vl-region.vl-region--no-space-top">
                                        <p>
-                                          This document describes the usage of the following datatypes for a correct usage of the Application Profile:<br/> |
+                                          In diesem Dokument werden die folgenden Datentypen erläutert: <br/> |
                                           {%- for dataType in data.dataTypes %}
                                              {% if dataType.applicationProfileLabel[language] %}
                                                 <a href="#{{ dataType.applicationProfileLabel[language] | generateAnchorTag() }}">
@@ -300,7 +303,7 @@
                            {% endblock %}
                         </div>
                         <div class="vl-region vl-region.vl-region--no-space-top">
-                           <h2 class="vl-title--h2">Entities</h2>
+                           <h2 class="vl-title--h2">Entitäten</h2>
                         </div>
                         {% for entity in data.classes %}
                            {% if entity.applicationProfileLabel[language] %}
@@ -315,20 +318,20 @@
                               </h3>
                               <div class="vl-region vl-region.vl-region--no-space-top">
                                  <dl>
-                                    <dt>Description</dt>
+                                    <dt>Beschreibung</dt>
                                     <dd>
                                        {% if entity.applicationProfileDefinition[language] %}
                                           {{ entity.applicationProfileDefinition[language] }}
                                        {% endif %}
                                     </dd>
                                     {% if entity.applicationProfileUsageNote[language] %}
-                                       <dt>Usage</dt>
+                                       <dt>Gebrauchen</dt>
                                        <dd>
                                           {{ entity.applicationProfileUsageNote[language] | safe }}
                                        </dd>
                                     {% endif %}
                                     {% if ((entity.parents | length) > 0 ) %}
-                                       <dt>Subclass of</dt>
+                                       <dt>Unterklasse von</dt>
                                        <dd>
                                           {%- for parent in entity['parents'] %}
                                              <a href="#{{ parent.applicationProfileLabel[language] | generateAnchorTag() }}">
@@ -338,10 +341,10 @@
                                           {%- endfor %}
                                        </dd>
                                     {% endif %}
-                                    <dt>Properties</dt>
+                                    <dt>Eigenschaften</dt>
                                     {% if ((entity.properties | length) > 0 ) %}
                                        <dd>
-                                          For this entity the following properties are defined:
+                                          Die folgenden Eigenschaften sind für diese Entität definiert:
                                           {%- for prop in entity['properties'] %}
                                              {% if prop.applicationProfileLabel[language] %}
                                                 <a href="#{{ entitylabel | generateAnchorTag(prop.applicationProfileLabel[language]) }}">
@@ -352,7 +355,7 @@
                                           {%- endfor %}.
                                        </dd>
                                     {% else %}
-                                       <dd>No properties have been defined for this entity.</dd>
+                                       <dd>Für diese Entität sind keine Eigenschaften definiert.</dd>
                                     {% endif %}
                                  </dl>
                               </div>
@@ -361,12 +364,12 @@
                                     <table class="vl-data-table">
                                        <thead>
                                           <tr class="vl-data-table__header">
-                                             <th class="vl-data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
-                                             <th class="vl-data-table__header-title--sortable">Expected Range</th>
-                                             <th class="vl-data-table__header-title--sortable">Cardinality</th>
-                                             <th class="vl-data-table__header-title--sortable">Description</th>
-                                             <th class="vl-data-table__header-title--sortable">Usage</th>
-                                             <th class="vl-data-table__header-title--sortable">Codelist</th>
+                                             <th class="vl-data-table__header-title--sortable data-table__header-title--sortable-active">Eigentum</th>
+                                             <th class="vl-data-table__header-title--sortable">Erwarteter Typ</th>
+                                             <th class="vl-data-table__header-title--sortable">Mächtigkeit</th>
+                                             <th class="vl-data-table__header-title--sortable">Beschreibung</th>
+                                             <th class="vl-data-table__header-title--sortable">Gebrauchen</th>
+                                             <th class="vl-data-table__header-title--sortable">Code-Liste</th>
                                           </tr>
                                        </thead>
                                        <tbody class="supertype">
@@ -427,9 +430,9 @@
                               {% endif %}
                            </div>
                         {% endfor %}
-                        {% if if ( ( data.dataTypes | length ) > 0 ) %}
+                        {% if ( ( data.dataTypes | length ) > 0 ) %}
                            <div class="vl-region vl-region.vl-region--no-space-top">
-                              <h2 class="vl-title--h2">Datatypes</h2>
+                              <h2 class="vl-title--h2">Datentypen</h2>
                            </div>
                            {% for dataType in data.dataTypes %}
                               {% if dataType.applicationProfileLabel[language] %}
@@ -444,20 +447,20 @@
                                  </h3>
                                  <div class="vl-region vl-region.vl-region--no-space-top">
                                     <dl>
-                                       <dt>Description</dt>
+                                       <dt>Beschreibung</dt>
                                        <dd>
                                           {% if dataType.applicationProfileDefinition[language] %}
                                              {{ dataType.applicationProfileDefinition[language] }}
                                           {% endif %}
                                        </dd>
                                        {% if dataType.applicationProfileUsageNote[language] %}
-                                          <dt>Usage</dt>
+                                          <dt>Verwendung</dt>
                                           <dd>
                                              {{ dataType.applicationProfileUsageNote[language] | safe }}
                                           </dd>
                                        {% endif %}
                                        {% if ((dataType.parents | length) > 0 ) %}
-                                          <dt>Subclass of</dt>
+                                          <dt>Unterklasse von</dt>
                                           <dd>
                                              {%- for parent in dataType['parents'] %}
                                                 <a href="#{{ parent.applicationProfileLabel[language] | generateAnchorTag() }}">
@@ -467,9 +470,9 @@
                                              {%- endfor %}
                                           </dd>
                                        {% endif %}
-                                       <dt>Properties</dt>
+                                       <dt>Eigenschaften</dt>
                                        {% if ((dataType.properties | length) > 0 ) %}
-                                          <dd>We have defined the following properties for this datatype:
+                                          <dd>Für diesen Datentyp sind die folgenden Eigenschaften definiert:
                                              {%- for prop in dataType['properties'] %}
                                                 <a href="#{{ dataTypelabel | generateAnchorTag(prop.applicationProfileLabel[language]) }}">{{ prop.applicationProfileLabel[language] }}</a>
                                                 {% if not loop.last %},
@@ -477,7 +480,7 @@
                                              {%- endfor %}.
                                           </dd>
                                        {% else %}
-                                          <dd>There are no properties defined for this datatype.</dd>
+                                          <dd>Für diesen Datentyp wurden keine Eigenschaften definiert.</dd>
                                        {% endif %}
                                     </dl>
                                  </div>
@@ -486,12 +489,12 @@
                                        <table class="vl-data-table">
                                           <thead>
                                              <tr class="vl-data-table__header">
-                                                <th class="vl-data-table__header-title--sortable data-table__header-title--sortable-active">Property</th>
-                                                <th class="vl-data-table__header-title--sortable">Expects Type</th>
-                                                <th class="vl-data-table__header-title--sortable">Cardinality</th>
-                                                <th class="vl-data-table__header-title--sortable">Description</th>
-                                                <th class="vl-data-table__header-title--sortable">Usage</th>
-                                                <th class="vl-data-table__header-title--sortable">Codelist</th>
+                                                <th class="vl-data-table__header-title--sortable data-table__header-title--sortable-active">Eigentum</th>
+                                                <th class="vl-data-table__header-title--sortable">Erwarteter Typ</th>
+                                                <th class="vl-data-table__header-title--sortable">Mächtigkeit</th>
+                                                <th class="vl-data-table__header-title--sortable">Beschreibung</th>
+                                                <th class="vl-data-table__header-title--sortable">Gebrauchen</th>
+                                                <th class="vl-data-table__header-title--sortable">Code-Liste</th>
                                              </tr>
                                           </thead>
                                           <tbody class="supertype">
@@ -554,30 +557,32 @@
                            {% endfor %}
                         {% endif %}
                         <div class="vl-region vl-region.vl-region--no-space-top" id="jsonld">
-                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD context</h2>
-                           (non-normative)
+                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">JSON-LD-Kontext</h2>
+                           (nicht normativ)
                            {% block jsonld %}
-                              <p>A reusable JSON-LD context definition for this application profile is retrievable at:
+                              <p>Eine wiederverwendbare JSON-LD-Kontextdefinition für dieses Anwendungsprofil finden Sie unter:
                                  <a href="{{ data.metadata.documentroot }}/context/{{ data.metadata.filename }}.jsonld" target="_blank">
                                     {{ data.metadata.documentroot }}/context/ {{ data.metadata.filename }}.jsonld</a>
                               </p>
                            {% endblock %}
                         </div>
                         <div class="vl-region vl-region.vl-region--no-space-top" id="shacl">
-                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">SHACL template</h2>
-                           (non-normative)
+                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">SHACL-Vorlage</h2>
+                           (nicht normativ)
                            {% block shacl %}
-                              <p>A reusable SHACL template for this application profile is retrievable at:
+                              <p>Eine wiederverwendbare SHACL-Vorlagendefinition für dieses Anwendungsprofil finden Sie unter:
                                  <a href="{{ data.metadata.documentroot }}/shacl/{{ data.metadata.filename }}-SHACL.ttl" target="_blank">
                                     {{ data.metadata.documentroot }}/shacl/ {{ data.metadata.filename }}-SHACL.ttl</a>
                               </p>
                            {% endblock %}
                         </div>
                         <div class="vl-region vl-region.vl-region--no-space-top" id="mappingext">
-                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">Used (external) terminology</h2>
-                           <p>This section provides an overview of how terminology from vocabularies is used in this application profile.</p>
+                           <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">verwendete (externe) Terminologie</h2>
+                           <p>Dieser Abschnitt bietet einen Überblick darüber, wie die Vokabularterminologie in diesem Anwendungsprofil verwendet
+                              wurde.
+                           </p>
                            <p>
-                              This application profile relies on terms from these proprietary vocabularies:
+                              Dieses Anwendungsprofil basiert auf Begriffen aus diesen selbstverwalteten Vokabularien:
                               <ul>
                                  {% for ns in data.metadata.inDomainNamespaces %}
                                     <li>
@@ -586,25 +591,26 @@
                                  {% endfor %}
                               </ul>
                            </p>
-                           <p>For terms from vocabularies outside the namespace {{ data.metadata.uridomain }} takes the form of a mapping: for the
-                              terms listed in this section, it was decided to use a term identifier (the URI) from vocabularies that do not fall under
-                              the management of Data.vlaanderen.be.
+                           <p>Für Vokabularbegriffe außerhalb des Namensraums nimmt {{ data.metadata.uridomain }} die Form einer Zuordnung an: for
+                              Die in diesem Abschnitt aufgeführten Begriffe wurden so ausgewählt, dass sie eine Begriffskennung (die URI) aus
+                              Vokabularien verwenden, die dies nicht sind fallen unter die Leitung von Data.vlaanderen.be.
                            </p>
-                           <p>This form of reuse is agreeing to the underlying definition, labels and restrictions associated with the URI in the
-                              context of this application profile. This means that the above definitions, labels and usage notes should not contradict
-                              those of the URI.
+                           <p>Diese Form der Wiederverwendung bedeutet die Zustimmung zu den zugrunde liegenden Definitionen, Bezeichnungen und
+                              Einschränkungen mit dem URI im Kontext dieses Anwendungsprofils verknüpft. Das bedeutet, dass man die oben genannten
+                              Definitionen und Bezeichnungen verwenden muss und Nutzungshinweise sollten denen der URI nicht widersprechen.
                            </p>
-                           <p>However, this mapping is a choice valid for this application profile. But it is a strong suggestion to also apply
-                              this mapping in other, related domains. A change to the mapping is not a semantic change of the application profile, but
-                              it may have a major implementation impact. The impact can be described clearly and unambiguously with the mapping below.
+                           <p>Diese Zuordnung ist jedoch eine für dieses Anwendungsprofil gültige Auswahl. Aber es ist ein starker Hinweis darauf
+                              Mapping kann auch in anderen, verwandten Bereichen angewendet werden. Eine Änderung der Zuordnung ist keine semantische
+                              Änderung des Anwendungsprofils, kann jedoch erhebliche Auswirkungen auf die Implementierung haben. Mit der Zuordnung
+                              unten Die Auswirkungen können klar und eindeutig beschrieben werden.
                            </p>
-                           <p>Note that the need to implement a mapping change often also entails semantic adjustments. Therefore, it is advisable
-                              to include changes in the normal change management of the standard.
+                           <p>Beachten Sie, dass die Notwendigkeit einer Mapping-Änderung oft auch semantische Anpassungen mit sich bringt bringt.
+                              Daher ist es sinnvoll, Änderungen in das normale Änderungsmanagement der Norm einzubeziehen.
                            </p>
                            <table class="definition external">
                               <thead>
                                  <tr>
-                                    <th>term</th>
+                                    <th>Begriff</th>
                                     <th>URI</th>
                                  </tr>
                               </thead>
@@ -677,31 +683,31 @@
                               <div class="vl-side-navigation__group">
                                  <ul>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#introduction">Introduction</a>
+                                       <a href="#introduction">Einleitung</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#summary">Summary</a>
+                                       <a href="#summary">Zusammenfassung</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#status">Status of this document</a>
+                                       <a href="#status">Status dieses Dokuments</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#license">License</a>
+                                       <a href="#license">Lizenz</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#conformance">Conformance</a>
+                                       <a href="#conformance">Übereinstimmung</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#overview">Overview</a>
+                                       <a href="#overview">Überblick</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#jsonld">JSON-LD Context</a>
+                                       <a href="#jsonld">JSON-LD-Kontext</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#shacl">SHACL template</a>
+                                       <a href="#shacl">SHACL-Vorlage</a>
                                     </li>
                                     <li class="vl-side-navigation__item">
-                                       <a href="#mappingext">External terminology</a>
+                                       <a href="#mappingext">Externe Terminologie</a>
                                     </li>
                                  </ul>
                               </div>

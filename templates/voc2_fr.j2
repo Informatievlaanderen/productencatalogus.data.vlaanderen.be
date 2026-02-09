@@ -45,34 +45,34 @@
                 <h1 class="vl-title--h1 title p-name" property="dcterms:title" id="title">{{ data.metadata.title }}</h1>
                 {% if data.metadata.autotranslate %}
                   <div class="disclaimer">
-                    <p>This document is a translation from {{ data.metadata.primaryLanguage }} to English.</p>
+                    <p>Ce document est une traduction de {{ data.metadata.primaryLanguage }} vers le français.</p>
                     <br></div>
                   {% endif %}
                   {% if data.metadata.prefix %}
-                    <h2 class="vl-title--h2" id="subtitle" property="bibo:subtitle">Specification of
+                    <h2 class="vl-title--h2" id="subtitle" property="bibo:subtitle">Spécification de
                       <em>{{ data.metadata.prefix }}</em>
                     </h2>
                   {% endif %}
                   <div class="head">
                     <dl>
-                      <dt>Status</dt>
+                      <dt>Statut</dt>
                       <dd>
                         <a href="{{ data.metadata.status }}">{{ data.metadata.statuslabel }}</a>
                       </dd>
-                      <dt>Published on</dt>
+                      <dt>Publié le</dt>
                       <dd>{{ data.metadata.issued }}</dd>
-                      <dt>This version</dt>
+                      <dt>Cette version</dt>
                       <dd>
                         <a href="{{ data.metadata.navigation.self }}">{{ data.metadata.navigation.self }}</a>
                       </dd>
                       {% if data.metadata.navigation.next %}
-                        <dt>Next version</dt>
+                        <dt>Version suivante</dt>
                         <dd>
                           <a href="{{ data.metadata.navigation.next }}">{{ data.metadata.navigation.next }}</a>
                         </dd>
                       {% endif %}
                       {% if data.metadata.navigation.prev %}
-                        <dt>Previous version</dt>
+                        <dt>Version précédente</dt>
                         <dd>
                           <a href="{{ data.metadata.navigation.prev }}">{{ data.metadata.navigation.prev }}</a>
                         </dd>
@@ -80,7 +80,7 @@
                     </dl>
                   </div>
                   <dl>
-                    <dt>Authors</dt>
+                    <dt>Auteurs</dt>
                     {% set sortedAuthors = (data.stakeholders.authors | sort(attribute='lastName')) %}
                     {% for author in sortedAuthors %}
                       <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
@@ -101,7 +101,7 @@
                         </span>
                       </dd>
                     {% endfor %}
-                    <dt>Editors</dt>
+                    <dt>Éditeurs</dt>
                     {% set sortedEditors = (data.stakeholders.editors | sort(attribute='lastName')) %}
                     {% for editor in sortedEditors %}
                       <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
@@ -122,7 +122,7 @@
                         </span>
                       </dd>
                     {% endfor %}
-                    <dt>Contributors</dt>
+                    <dt>Employés</dt>
                     {% set sortedContributors = (data.stakeholders.contributors | sort(attribute='lastName')) %}
                     {% for contributor in sortedContributors %}
                       <dd inlist="" rel="foaf:maker" class="p-author h-card vcard">
@@ -148,7 +148,7 @@
               </div>
               <div class="head" role="metainfo" id="metainfo">
                 <dl>
-                  <dt>Source data</dt>
+                  <dt>Données sources</dt>
                   <dd>
                     <a href="{{ data.metadata.repositoryurl }}">{{ data.metadata.repositoryurl }}</a>
                   </dd>
@@ -156,16 +156,16 @@
                   <dd>
                     <a href="{{ data.metadata.changelogurl }}">{{ data.metadata.changelogurl }}</a>
                   </dd>
-                  <dt id="feedbackurl">Comments & Feedback</dt>
+                  <dt id="feedbackurl">Commentaires et réactions</dt>
                   <dd>
                     <a href="{{ data.metadata.feedbackurl }}">{{ data.metadata.feedbackurl }}</a>
                   </dd>
-                  <dt>Register of Standards</dt>
+                  <dt>Registre des normes</dt>
                   <dd>
                     <a href="{{ data.metadata.standaardregisterurl }}">{{ data.metadata.standaardregisterurl }}</a>
                   </dd>
                   {% if data.metadata.dependencies %}
-                    <dt>Dependencies</dt>
+                    <dt>Dépendances</dt>
                     <dd>
                       {% for dep in data.metadata.dependencies %}
                         <a href="{{ dep.packageurl }}">{{ dep.packagelabel }}</a>
@@ -187,11 +187,12 @@
                 <div class="vl-region" id="introduction">
                   <div class="vl-introduction vl-typography">
                     {% block introduction %}
-                      <p>This document describes a
-                        <strong>vocabulary</strong>, in this case
-                        <strong>{{ data.metadata.title }}</strong>. A vocabulary is a collection of reusable terms, namely classes and
-                          properties, whose meaning is recorded through a label and definition. For terms defined in this domain, additional
-                          formal agreements are available. For external terms, the formal agreements are copied from the external source.
+                      <p>Ce document décrit un
+                        <strong>vocabulaire</strong>, dans ce cas
+                        <strong>{{ data.metadata.title }}</strong>. Un vocabulaire est un ensemble de termes réutilisables, à savoir des classes
+                          et des propriétés, dont la signification est enregistrée par le biais d'une étiquette et d'une définition. Pour les
+                          termes définis dans ce domaine, des accords formels supplémentaires sont disponibles. Pour les conditions externes, les
+                          accords formels sont copiés à partir de la source externe.
                       </p>
                     {% endblock %}
                   </div>
@@ -205,12 +206,12 @@
                     typeof="bibo:Chapter"
                     resource="#ref"
                     rel="bibo:Chapter">
-                    <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_abstract">Summary</h2>
+                    <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_abstract">Résumé</h2>
                     <div class="vl-typography" id="summary">
                       {{ block.super }}
                       {% block summary %}
                         <p>
-                          The {{ data.metadata.title }} vocabulary specifies a number of classes and properties to describe a
+                          Le {{ data.metadata.title }} vocabulaire spécifie un certain nombre de classes et de propriétés pour en décrire une
                           {{ data.metadata.title | lower }}.
                         </p>
                         <p>
@@ -222,24 +223,24 @@
                 </div>
                 <div class="vl-region vl-region--no-space-top">
                   <section class="introductory" id="sotd" typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter">
-                    <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">Status of this document</h2>
+                    <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_sotd">État d'avancement du présent document</h2>
                     <div class="vl-typography" id="status">
                       {% block status %}
                         <p>
-                          <em>This section describes the status of this document at the time of publication. It is possible that newer versions
-                            have already been released in the meantime.</em>
+                          <em>Cette section décrit l'état d'avancement de ce document au moment de sa publication. Il est possible que de
+                            nouvelles versions aient déjà été publiées entre-temps.</em>
                         </p>
                         <p>
-                          This vocabulary has the status
+                          Ce vocabulaire a le statut
                           <a href="{{ data.metadata.status }}">
                             {{ data.metadata.statuslabel }}</a>
-                          and was issued on {{ data.metadata.issued }}.
+                          et a été publié le {{ data.metadata.issued }}.
                         </p>
-                        <p>This document is an official specification of a vocabulary and provides a shared conceptual framework for certain
-                          concepts. This specification serves to clarify the definition, use, domain, and scope of the RDF terms within this
-                          domain. The terms defined in this vocabulary are persistent and will therefore never disappear, nor will the definitions
-                          change except to further clarify an existing definition. However, terms may be labeled as obsolete and replaced in newer
-                          versions of this specification.</p>
+                        <p>Ce document est une spécification officielle d'un vocabulaire et fournit un cadre conceptuel commun pour certains
+                          concepts. Cette spécification sert à clarifier la définition, l'utilisation, le domaine et la portée des termes RDF dans
+                          ce domaine. Les termes définis dans ce vocabulaire sont persistants et ne disparaîtront donc jamais, et les définitions
+                          ne changeront pas, sauf pour clarifier davantage une définition existante. Cependant, les termes peuvent être étiquetés
+                          comme obsolètes et remplacés dans les versions plus récentes de cette spécification.</p>
                         {% if data.metadata.comment[language] %}
                           <p>
                             {{ data.metadata.comment[language] }}
@@ -253,20 +254,20 @@
                   <section typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter" id="license-and-liability">
                     <h2 class="vl-title--h2" id="licenseandliability" aria-level="1" role="heading">
                       <span class="secno">1.
-                      </span>License
+                      </span>Licence
                     </h2>
                     {% block license %}
                       <p>
                         <span rel="dct:type" property="dct:title" href="http://purl.org/dc/dcmitype/Text" xmlns:dct="http://purl.org/dc/terms/">
-                          This specification</span>
-                        of
+                          Cette spécification</span>
+                        de
                         <a
                           rel="cc:attributionURL"
                           property="cc:attributionName"
                           href="http://vlaanderen.be/informatievlaanderen"
                           xmlns:cc="http://creativecommons.org/ns#">Informatie Vlaanderen</a>
-                        is published under the
-                        <a href="{{ data.metadata.license }}" rel="license">"Model License Free Reuse - v1.0"</a>.
+                        est publié sous la
+                        <a href="{{ data.metadata.license }}" rel="license">"licence Modèle Réutilisation Libre - v1.0"</a>.
                       </p>
                     {% endblock %}
                   </section>
@@ -275,13 +276,13 @@
                   <section typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter" id="conformance-statement">
                     <h2 class="vl-title--h2" id="conformance" aria-level="1" role="heading">
                       <span class="secno">2.
-                      </span>Conformity
+                      </span>Conformité
                     </h2>
                     {% block conformance %}
-                      <p>An exchange of data, by whatever means, is subject to this vocabulary when it uses the terminology (classes and
-                        properties) in a manner consistent with the semantics established in the latest version of the specification (domain,
-                        scope, definition and usage) and does not use terminology from other vocabularies as an alternative to the proposed
-                        terminology included in this vocabulary.</p>
+                      <p>Un échange de données, par quelque moyen que ce soit, est soumis à ce vocabulaire lorsqu'il utilise la terminologie
+                        (classes et propriétés) d'une manière cohérente avec la sémantique établie dans la dernière version de la spécification
+                        (domaine, portée, définition et usage) et n'utilise pas la terminologie d'autres vocabulaires comme alternative à la
+                        terminologie proposée incluse dans ce vocabulaire.</p>
                     {% endblock %}
                   </section>
                 </div>
@@ -289,18 +290,18 @@
                   <section typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter" id="overview">
                     <h2 class="vl-title--h2" id="overview" aria-level="1" role="heading">
                       <span class="secno">3.
-                      </span>Overview
+                      </span>Aperçu
                     </h2>
                     {% if data.metadata.autotranslate %}
                       <div class="disclaimer">
-                        <p>This document is a translation from {{ data.metadata.primaryLanguage }} to English.</p>
+                        <p>Ce document est une traduction de {{ data.metadata.primaryLanguage }} vers le français.</p>
                         <br></div>
                       {% endif %}
                       <div class="vl-region vl-region--no-space-top">
-                        <p>This section lists all the classes and properties of the vocabulary.</p>
+                        <p>Cette section répertorie toutes les classes et propriétés du vocabulaire.</p>
                         <p>
                           {% if externalvocs %}
-                            This vocabulary further refers to terms from the following vocabularies:
+                            Ce vocabulaire fait en outre référence à des termes issus des vocabulaires suivants :
                             <ul>
                               {% for term in externalvocs %}
                                 <li>
@@ -328,7 +329,7 @@
                       {% endif %}
                       {% if ( ( data.properties | length ) > 0 ) %}
                         <div class="vl-region vl-region--no-space-top">
-                          <h3 class="vl-title--h3">Properties</h3>
+                          <h3 class="vl-title--h3">Propriétés</h3>
                           <div class="vl-grid">
                             <p>
                               |
@@ -350,18 +351,18 @@
                       </h2>
                       {% if data.classes %}
                         <div class="vl-region vl-region--no-space-top">
-                          <p>This section provides a formal definition to each class.</p>
+                          <p>Cette section fournit une définition formelle de chaque classe.</p>
                         </div>
                         {% for class in data.classes %}
                           <div class="vl-region vl-region--no-space-top">
-                            <h3 class="vl-title--h3" id="{{ class.id | replaceBaseURI(data.baseURI) }}">Class
+                            <h3 class="vl-title--h3" id="{{ class.id | replaceBaseURI(data.baseURI) }}">Classe
                               <em>{{ class.vocabularyLabel[language] }}</em>
                             </h3>
                             <table class="definition">
                               <tbody>
                                 <tr>
                                   <th>Type</th>
-                                  <td>Class</td>
+                                  <td>Classe</td>
                                 </tr>
                                 <tr>
                                   <th>URI</th>
@@ -371,7 +372,7 @@
                                 </tr>
                                 {% if ( ( class.parents | length ) > 0) %}
                                   <tr>
-                                    <th>Specialization of</th>
+                                    <th>Spécialisation de</th>
                                     <td>
                                       <ul>
                                         {% for parent in class.parents|sort %}
@@ -384,20 +385,20 @@
                                   </tr>
                                 {% endif %}
                                 <tr>
-                                  <th>Definition</th>
+                                  <th>Définition</th>
                                   <td>{{ class.vocabularyDefinition[language] }}</td>
                                 </tr>
                                 {% if class.vocabularyUsageNote[language] %}
                                   <tr>
                                     <th>
-                                      <p>Usage</p>
+                                      <p>Utilisation</p>
                                     </th>
                                     <td>{{ class.vocabularyUsageNote[language] }}</td>
                                   </tr>
                                 {% endif %}
                                 <tr>
                                   <th>
-                                    <p>Status</p>
+                                    <p>Statut</p>
                                   </th>
                                   {% if class.status %}
                                     <td>
@@ -415,7 +416,8 @@
                         {% endfor %}
                       {% else %}
                         <div class="vl-region vl-region--no-space-top">
-                          <p>No classes are defined in this vocabulary. However, it is possible that classes from a related vocabulary are reused.</p>
+                          <p>Aucune classe n'est définie dans ce vocabulaire. Cependant, il est possible que des classes d'un vocabulaire connexe
+                            soient réutilisées.</p>
                         </div>
                       {% endif %}
                     </section>
@@ -424,22 +426,22 @@
                     <section typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter" id="properties">
                       <h2 class="vl-title--h2" id="properties" aria-level="1" role="heading">
                         <span class="secno">5.
-                        </span>Properties
+                        </span>Propriétés
                       </h2>
                       {% if data.properties %}
                         <div class="vl-region vl-region--no-space-top">
-                          <p>This section provides a formal definition to each property.</p>
+                          <p>Cette section fournit une définition formelle de chaque propriété.</p>
                         </div>
                         {% for property in data.properties %}
                           <div class="vl-region vl-region--no-space-top">
-                            <h3 class="vl-title--h3" id="{{ property.id | replaceBaseURI(data.baseURI) }}">Property
+                            <h3 class="vl-title--h3" id="{{ property.id | replaceBaseURI(data.baseURI) }}">Propriété
                               <em>{{ property.vocabularyLabel[language] }}</em>
                             </h3>
                             <table class="definition">
                               <tbody>
                                 <tr>
                                   <th>Type</th>
-                                  <td>Property</td>
+                                  <td>Propriété</td>
                                 </tr>
                                 <tr>
                                   <th>URI</th>
@@ -449,7 +451,7 @@
                                 </tr>
                                 {% if ( ( property.domain  | length ) > 0 ) %}
                                   <tr>
-                                    <th>Domain</th>
+                                    <th>Domaine</th>
                                     <td>
                                       <code>
                                         {{ property.domain }}
@@ -459,7 +461,7 @@
                                 {% endif %}
                                 {% if (( property.range  | length ) > 0) %}
                                   <tr>
-                                    <th>Range</th>
+                                    <th>Gamme</th>
                                     <td>
                                       <code>
                                         {{ property.range.id }}
@@ -469,7 +471,7 @@
                                 {% endif %}
                                 {% if ( ( property.parents | length ) > 0 ) %}
                                   <tr>
-                                    <th>Specialization of</th>
+                                    <th>Spécialisation de</th>
                                     <td>
                                       <ul>
                                         {% for parent in property.parents|sort %}
@@ -482,18 +484,18 @@
                                   </tr>
                                 {% endif %}
                                 <tr>
-                                  <th>Definition</th>
+                                  <th>Définition</th>
                                   <td>{{ property.vocabularyDefinition[language] }}</td>
                                 </tr>
                                 {% if property.vocabularyUsageNote[language] %}
                                   <tr>
-                                    <th>Usage</th>
+                                    <th>Utilisation</th>
                                     <td>{{ property.vocabularyUsageNote[language] }}</td>
                                   </tr>
                                 {% endif %}
                                 <tr>
                                   <th>
-                                    <p>Status</p>
+                                    <p>Statut</p>
                                   </th>
                                   {% if property.status %}
                                     <td>
@@ -511,8 +513,8 @@
                         {% endfor %}
                       {% else %}
                         <div class="vl-region vl-region--no-space-top">
-                          <p>No properties are defined in this vocabulary. However, it is possible that properties from a related vocabulary are
-                            reused.</p>
+                          <p>Aucune propriété n'est définie dans ce vocabulaire. Cependant, il est possible que les propriétés d'un vocabulaire
+                            connexe soient réutilisées.</p>
                         </div>
                       {% endif %}
                     </section>
@@ -521,14 +523,16 @@
                     <section typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter" id="external">
                       <h2 class="vl-title--h2" id="externals" aria-level="1" role="heading">
                         <span class="secno">6.
-                        </span>External terminology
+                        </span>Terminologie externe
                       </h2>
-                      <p>Since 2025, external terms are no longer included as non-normative mapping in vocabularies of data.vlaanderen.be.</p>
+                      <p>Depuis 2025, les termes externes ne sont plus inclus comme mapping non normatif dans les vocabulaires de
+                        data.vlaanderen.be.</p>
                       <p>
-                        Instead, a table with which external URIs are used has been added to each application profile. This simplifies the
-                        objective of this document. Namely listing and managing terms defined in this namespace.</p>
+                        Au lieu de cela, un tableau avec les URI externes utilisées a été ajouté à chaque profil d'application. Cela simplifie
+                        l'objectif de ce document. À savoir l'énumération et la gestion des termes définis dans cet espace de noms.</p>
                       <p>
-                        To still achieve harmonization of the use of external terminology, a general mapping is published.</p>
+                        Pour obtenir néanmoins une harmonisation de l'utilisation de la terminologie externe, un mapping général est
+                        publié.</p>
                     </section>
                   </div>
                 </div>
@@ -539,28 +543,28 @@
                         <div class="vl-side-navigation__group">
                           <ul>
                             <li class="vl-side-navigation__item">
-                              <a href="#abstract">Summary</a>
+                              <a href="#abstract">Résumé</a>
                             </li>
                             <li class="vl-side-navigation__item">
-                              <a href="#sotd">Status of this document</a>
+                              <a href="#sotd">État d'avancement du présent document</a>
                             </li>
                             <li class="vl-side-navigation__item">
-                              <a href="#license-and-liability">1. License</a>
+                              <a href="#license-and-liability">1. Licence</a>
                             </li>
                             <li class="vl-side-navigation__item">
-                              <a href="#conformance-statement">2. Conformity</a>
+                              <a href="#conformance-statement">2. Conformité</a>
                             </li>
                             <li class="vl-side-navigation__item">
-                              <a href="#overview">3. Overview</a>
+                              <a href="#overview">3. Aperçu</a>
                             </li>
                             <li class="vl-side-navigation__item">
                               <a href="#classes">4. Classes</a>
                             </li>
                             <li class="vl-side-navigation__item">
-                              <a href="#properties">5. Properties</a>
+                              <a href="#properties">5. Propriétés</a>
                             </li>
                             <li class="vl-side-navigation__item">
-                              <a href="#external" data-child="external">6. External terminology</a>
+                              <a href="#external" data-child="external">6. Terminologie externe</a>
                             </li>
                           </ul>
                         </div>
