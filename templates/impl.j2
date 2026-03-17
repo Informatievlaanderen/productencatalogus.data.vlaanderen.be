@@ -183,16 +183,18 @@
          <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="vl-main-content">
             <div class="vl-layout vl-layout--wide">
                <div class="vl-grid">
-                  <div class="vl-col--9-12 vl-col--12-12--s">
+                  <div class="vl-col--10-12 vl-col--12-12--s">
                      <div class="vl-region" id="introduction">
                         <div class="vl-introduction vl-typography">
                            {% block introduction %}
-                           <p>
-                              Dit document beschrijft een
-                              <strong>implementatiemodel</strong>, in dit geval
-                              <strong>
-                              {{ data.metadata.title }}</strong>. <!-- Een implementatiemodel is een specificatie die bestaande applicatieprofielen toepast in een specifieke implementatie. -->
-                              <!-- Daarbij wordt het gebruik van de termen toegelicht voor de interbestuurlijke uitwisseling van overheidsinformatie. -->
+                              <p>
+                                 Dit document beschrijft een
+                                 <strong>implementatiemodel</strong>, in dit geval
+                                 <strong>
+                                    {{ data.metadata.title }}</strong>. <!-- Een implementatiemodel is een specificatie die bestaande termen hergebruikt van verschillende basis-standaarden en
+                                       daar meer specificiteit aan toevoegt. -->
+                                 <!-- Daarbij wordt het gebruik van de termen toegelicht voor de interbestuurlijke uitwisseling van overheidsinformatie.
+                                 -->
                               Dit implementatiemodel beantwoordt de vraag over hoe het corresponderende domeinmodel in de praktijk kan toegepast
                               worden. Daarbij worden de beperkingen (kardinaliteit, codelijsten) toegelicht en de overeenkomstige (RDF) termen
                               opgelijst.
@@ -672,7 +674,7 @@
                            </table>
                         </div>
                      </div>
-                     <div class="vl-col--3-12 vl-col--12-12--s push--1-12" id="sideNav">
+                     <div class="vl-col--2-12 vl-col--12-12--s push--1-12" id="sideNav">
                         <nav class="vl-side-navigation vl-u-sticky vl-region" id="sideNav">
                            <div class="vl-side-navigation__content js-scrollspy">
                               <div class="vl-side-navigation__group">
