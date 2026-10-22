@@ -102,6 +102,18 @@
     "dummy": "002"
   },
   {
+    "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/ruslan",
+    "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
+    "branchtag": "main",
+    "name": "ipdc-lpdc-im",
+    "filename": "config/ipdc-lpdc-im.json",
+    "navigation": {
+      "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-07-04"
+    },
+    "disabled": false,
+    "dummy": "002"
+  },
+  {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/bert",
     "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
     "branchtag": "feature-bert",
