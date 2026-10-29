@@ -215,6 +215,18 @@
     "dummy": "002"
   },
   {
+    "urlref": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/ruslan",
+    "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
+    "branchtag": "main",
+    "name": "ipdc-lpdc",
+    "filename": "config/ipdc-lpdc-voc.json",
+    "navigation": {
+      "prev": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-07-04"
+    },
+    "disabled": false,
+    "dummy": "002"
+  },
+  {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc",
     "seealso": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-07-04",
     "type": "ap",
