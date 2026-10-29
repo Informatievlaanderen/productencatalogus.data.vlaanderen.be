@@ -163,7 +163,7 @@
               {% endblock %}
               </div>
             </div>
-                        <div class="vl-region vl-region--no-space-top" id="abstract">
+                        <div class="vl-region region">
                             <section id="abstract" class="introductory" property="dcterms:abstract" datatype="" typeof="bibo:Chapter" resource="#ref" rel="bibo:Chapter">
                                 <h2 class="vl-title--h2" aria-level="1" role="heading" id="h2_abstract">Summary</h2>
                                 <div class="vl-region vl-region--no-space-top vl-typography" id="summary"> 
@@ -416,7 +416,7 @@
                                 {% if external_terms %}
                                 {% for external in external_terms |sort(attribute=sortattr) %}
                                 <div class="vl-region vl-region--no-space-top">
-                                    <h3 class="h4" id="{{ external.name }}"><em>{{ external.label[language] }}</em></h3>
+                                    <h3 class="vl-title--h4" id="{{ external.name }}"><em>{{ external.label[language] }}</em></h3>
                                     <table class="definition">
                                         <tbody>
                                           
@@ -450,7 +450,7 @@
                             </section>
                         </div>
                     </div>
-                    <div class="vl-col--3-12 vl-col--12-12--s push--1-12" id="sideNav">
+                    <div class="vl-col--3-12 vl-col--12-12--s vl-col--4-12--m vl-push--1-12 vl-push--reset--m" id="sideNav">
                         <nav class="vl-side-navigation vl-u-sticky vl-region" id="sideNav">
                             <div class="vl-side-navigation__content js-scrollspy">
                                 <div class="vl-side-navigation__group">
@@ -476,7 +476,7 @@
                                         <li class="vl-side-navigation__item">
                                             <a href="#properties">5. Properties</a>
                                         </li>                                  
-                                        <li class="vl-side-navigation__item vl-side-navigation__item--parent">
+                                        <li class="vl-side-navigation__item side-navigation__item--parent">
                                             <a href="#external" data-child="external">6. External terminology</a>                                       
                                         </li>
                                     </ul>
@@ -493,6 +493,9 @@
                a[href]:hover {
                   background: #ffa
                }
+            }
+            #respecHeader {
+               padding-top: 2rem;
             }
             p {
                text-align: justify;
