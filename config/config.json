@@ -3,7 +3,7 @@
   "otherLanguages": [
     "fr", "de", "en"
   ],
-  "hostname": "https://productencatalogus.data.vlaanderen.be/",
+  "hostname": "https://productencatalogus.data.vlaanderen.be",
   "domain": "productencatalogus.data.vlaanderen.be",
   "publicationpoints" : ["production"],
   "generatedrepository" : {
