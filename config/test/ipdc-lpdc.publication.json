@@ -104,14 +104,14 @@
   {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2026-11-23",
     "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
-    "branchtag": "ontwerp-2026-11-13",
+    "branchtag": "ontwerp-2026-11-23",
     "name": "ipdc-lpdc-im",
     "filename": "config/ipdc-lpdc-im.json",
     "navigation": {
       "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-07-04"
     },
     "disabled": false,
-    "dummy": "010"
+    "dummy": "011"
   },
   {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/bert",
@@ -217,27 +217,27 @@
   {
     "urlref": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2026-11-23",
     "repository": "https://github.com/Informatievlaanderen/ipdc-lpdc",
-    "branchtag": "ontwerp-2026-11-13",
+    "branchtag": "ontwerp-2026-11-23",
     "name": "ipdc-lpdc",
     "filename": "config/ipdc-lpdc-voc.json",
     "navigation": {
       "prev": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-07-04"
     },
     "disabled": false,
-    "dummy": "010"
+    "dummy": "011"
   },
   {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc",
     "seealso": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2026-11-23",
     "type": "ap",
     "disabled": false,
-    "dummy": "010"
+    "dummy": "011"
   },
   {
     "urlref": "/ns/ipdc-lpdc",
     "seealso": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2026-11-23",
     "type": "voc",
     "disabled": false,
-    "dummy": "010"
+    "dummy": "011"
   }
 ]
