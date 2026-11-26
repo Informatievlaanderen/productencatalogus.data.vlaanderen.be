@@ -34,7 +34,7 @@
       "prev": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-07-04"
     },
     "disabled": false,
-    "dummy": "012"
+    "dummy": "013"
   },
   {
     "urlref": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2022-06-15",
@@ -71,20 +71,20 @@
       "prev": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2024-07-04"
     },
     "disabled": false,
-    "dummy": "011"
+    "dummy": "012"
   },
   {
     "urlref": "/doc/implementatiemodel/ipdc-lpdc",
     "seealso": "/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2026-11-23",
     "type": "ap",
     "disabled": false,
-    "dummy": "011"
+    "dummy": "012"
   },
   {
     "urlref": "/ns/ipdc-lpdc",
     "seealso": "/doc/vocabularium/ipdc-lpdc/ontwerpstandaard/2026-11-23",
     "type": "voc",
     "disabled": false,
-    "dummy": "011"
+    "dummy": "012"
   }
 ]
